@@ -72,4 +72,31 @@ public class Licuadora implements Interfaz{
     public void vaciar() {
         lleno = false;
     }  
+
+    /*
+     * Métodos Get y Set para cada atributo de licuadora
+     */
+    public boolean getEncendido() {
+        return encendido;
+    }
+
+    public void setEncendido(boolean encendido) {
+        this.encendido = encendido;
+    }
+
+    public boolean getLleno() {
+        return lleno;
+    }
+
+    public void setLleno(boolean lleno) {
+        this.lleno = lleno;
+    }
+
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
+    }
 }
