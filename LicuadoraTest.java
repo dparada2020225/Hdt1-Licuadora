@@ -27,7 +27,7 @@
      @Test
      public void testEncender() {
          licuadora.encender();
-         assertTrue(true, "La licuadora debería encender sin errores."); // Validamos que el método se ejecuta sin errores.
+         assertTrue(licuadora.getEncendido(), "La licuadora debería estar encendida.");
      }
  
      /**
@@ -36,7 +36,7 @@
      @Test
      public void testLlenar() {
          licuadora.llenar();
-         assertTrue(true, "La licuadora debería llenarse sin errores."); // Validamos que el método se ejecuta sin errores.
+         assertTrue(licuadora.getLleno(), "La licuadora debería estar llena.");
      }
  
      /**
@@ -44,9 +44,9 @@
       */
      @Test
      public void testAumentarVelocidad() {
-         int velocidadInicial = licuadora.consultarVelocidad();
+         int velocidadInicial = licuadora.getVelocidad();
          licuadora.aumentarVelocidad();
-         assertEquals(velocidadInicial + 1, licuadora.consultarVelocidad(), "La velocidad de la licuadora debería aumentar en 1.");
+         assertEquals(velocidadInicial + 1, licuadora.getVelocidad(), "La velocidad de la licuadora debería aumentar en 1.");
      }
  
      /**
@@ -66,7 +66,7 @@
      public void testVaciar() {
          licuadora.llenar();
          licuadora.vaciar();
-         assertFalse(licuadora.consultarLlenado(), "La licuadora debería estar vacía después de llamar al método vaciar.");
+         assertFalse(licuadora.getLleno(), "La licuadora debería estar vacía después de llamar al método vaciar.");
      }
  
      /**
@@ -75,6 +75,33 @@
      @Test
      public void testConsultarVelocidad() {
          assertEquals(0, licuadora.consultarVelocidad(), "La velocidad inicial de la licuadora debería ser 0.");
+     }
+ 
+     /**
+      * Prueba para verificar los métodos Get y Set del atributo encendido.
+      */
+     @Test
+     public void testGetSetEncendido() {
+         licuadora.setEncendido(true);
+         assertTrue(licuadora.getEncendido(), "El atributo encendido debería ser true después de usar setEncendido.");
+     }
+ 
+     /**
+      * Prueba para verificar los métodos Get y Set del atributo lleno.
+      */
+     @Test
+     public void testGetSetLleno() {
+         licuadora.setLleno(true);
+         assertTrue(licuadora.getLleno(), "El atributo lleno debería ser true después de usar setLleno.");
+     }
+ 
+     /**
+      * Prueba para verificar los métodos Get y Set del atributo velocidad.
+      */
+     @Test
+     public void testGetSetVelocidad() {
+         licuadora.setVelocidad(5);
+         assertEquals(5, licuadora.getVelocidad(), "La velocidad debería ser 5 después de usar setVelocidad.");
      }
  }
  

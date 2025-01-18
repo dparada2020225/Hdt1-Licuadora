@@ -1,6 +1,6 @@
 /**
  * Universidad del Valle de Guatemala
- * Autor: Denil José Parada Cabrera
+ * Autor: Denil José Parada Cabrera 24761
  * Fecha: 16 de enero de 2025
  * Descripción: Interfaz que define métodos para manejar un sistema que incluye encender,
  * llenar, controlar velocidad y consultar el estado del llenado.
