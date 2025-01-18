@@ -1,6 +1,7 @@
 /*
  * Universidad del Valle de Guatemala
  * Autora: Tiffany Salazar Suarez
+ * Carnet: 24630
  * Fecha de inicio: 17/01/2025
  * Fecha de finalización: 18/01/2025
  * Descripción: La clase licuadora se encarga de gestionar todos los métodos
