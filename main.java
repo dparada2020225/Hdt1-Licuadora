@@ -10,7 +10,7 @@ import java.util.*;
  *
 */
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         Licuadora blender = new Licuadora(false, false, 0);
@@ -29,21 +29,19 @@ public class main {
             }
         }
         while (flag) {
-
-            System.out.println(
-                    "\n1.Llenar o vaciar licuadora\n2. Encender o Apagar la licuadora\n3.Consultar Encendido o apagado\n4.Consultar llenado\n5.Aumentar velocidad(max 10)\n6.Consultar velocidad\n7.Desconectar Licuadora");
-
+            System.out.println("\n1.Llenar o vaciar licuadora\n2. Encender o Apagar la licuadora\n3.Consultar Encendido o apagado\n4.Consultar llenado\n5.Aumentar velocidad(max 10)\n6.Consultar velocidad\n7.Desconectar Licuadora");
             try {
                 int menu = keyboard.nextInt();
                 switch (menu) {
                     case 1:
                         boolean blenderState = blender.consultarLlenado();
-                        if (blenderState = false) {
-                            System.out.println("Ahora su licuadora está llena");
+                        System.out.println(blenderState);
+                        if (blenderState == false) {
                             blender.llenar();
+                            System.out.println("Ahora su licuadora está llena");
                         } else {
-                            System.out.println("Ahora su Licuadora está vacía");
                             blender.vaciar();
+                            System.out.println("Ahora su Licuadora está vacía");
                         }
                         break;
                     case 2:
