@@ -83,12 +83,11 @@ public class Main {
                         break;
                     case 5:
                         if(blender.getEncendido()){
-                            int velocidad=blender.getVelocidad();
-                            if(velocidad<10){
                             blender.aumentarVelocidad();
-                            System.out.println("Velocidad actual: "+ velocidad);
+                            if (blender.getVelocidad()>=10){
+                                System.out.println("Ha alcanzado la velocidad máxima de 10.");
                             }else{
-                                System.out.println("velocidad máxima alcanzada: "+velocidad);
+                                System.out.println("Ha aumentado la velocidad, su nueva velocidad es de " + blender.getVelocidad());
                             }
                         }else{
                             System.out.println("su licuadora está apagada encenderla priemro");
