@@ -44,8 +44,10 @@ public class Licuadora implements Interfaz{
      * Método implementado para aumentar velocidad de licuadora en una unidad
      */
     @Override
-     public void aumentarVelocidad(){
-        velocidad++;
+    public void aumentarVelocidad(){
+        if (velocidad <= 9){
+            velocidad++;
+        }
     }
 
     /*
