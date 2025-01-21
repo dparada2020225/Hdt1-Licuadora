@@ -5,7 +5,7 @@ import java.util.*;
  * Autora: Marco Alejandro Díaz Castañeda
  * Carnet: 24229
  * Fecha de inicio: 19/01/2025
- * Fecha de finalización: -
+ * Fecha de finalización: 20/01/2025
  * Descripción: Clase principal del programa donde recibira las entradas y salidas, tomara decisiones para poder empezar el probgrama de la licuadora
  *
 */
@@ -90,7 +90,7 @@ public class Main {
                                 System.out.println("Ha aumentado la velocidad, su nueva velocidad es de " + blender.getVelocidad());
                             }
                         }else{
-                            System.out.println("su licuadora está apagada encenderla priemro");
+                            System.out.println("su licuadora está apagada encenderla primero");
                         }
                     
                         break;
@@ -102,7 +102,7 @@ public class Main {
                         }
                         break;
                     case 7:
-                        System.out.println("Desenchufando su licuadora");
+                        System.out.println("Desconectando su licuadora");
                         blender.vaciar();
                         blender.setEncendido(false);
                         blender.setVelocidad(0);
