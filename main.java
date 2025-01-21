@@ -16,7 +16,7 @@ public class Main {
         Licuadora blender = new Licuadora(false, false, 0);
         Boolean flag = false;
         if (blender.getEncendido() == false) {
-            System.out.println("Desea conectar la super licuadora? \n1.si \n 2.no");
+            System.out.println("Desea conectar la super licuadora? \n1.si \n2.no");
             try {
                 int ans = keyboard.nextInt();
                 if (ans == 1) {
@@ -29,13 +29,12 @@ public class Main {
             }
         }
         while (flag) {
-            System.out.println("\n1.Llenar o vaciar licuadora\n2. Encender o Apagar la licuadora\n3.Consultar Encendido o apagado\n4.Consultar llenado\n5.Aumentar velocidad(max 10)\n6.Consultar velocidad\n7.Desconectar Licuadora");
+            System.out.println("\n1.Llenar o vaciar licuadora\n2.Encender o Apagar la licuadora\n3.Consultar Encendido o apagado\n4.Consultar llenado\n5.Aumentar velocidad(max 10)\n6.Consultar velocidad\n7.Desconectar Licuadora");
             try {
                 int menu = keyboard.nextInt();
                 switch (menu) {
                     case 1:
                         boolean blenderState = blender.consultarLlenado();
-                        System.out.println(blenderState);
                         if (blenderState == false) {
                             blender.llenar();
                             System.out.println("Ahora su licuadora está llena");
@@ -85,9 +84,9 @@ public class Main {
                     case 5:
                         if(blender.getEncendido()){
                             int velocidad=blender.getVelocidad();
-                            if(velocidad>=10){
+                            if(velocidad<10){
                             blender.aumentarVelocidad();
-                            System.out.println("Velocidad actual"+ velocidad);
+                            System.out.println("Velocidad actual: "+ velocidad);
                             }else{
                                 System.out.println("velocidad máxima alcanzada: "+velocidad);
                             }
